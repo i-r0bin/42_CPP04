@@ -6,7 +6,7 @@
 /*   By: rilliano <rilliano@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/14 20:11:07 by rilliano          #+#    #+#             */
-/*   Updated: 2024/12/14 20:24:42 by rilliano         ###   ########.fr       */
+/*   Updated: 2024/12/14 20:29:43 by rilliano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,12 @@
 #include "Animal.hpp"
 
 class Cat : public Animal {
-
 public:
     Cat();
+    Cat(const Cat& other);
+    Cat& operator=(const Cat& other);
     ~Cat();
     void makeSound() const;
-
 };
 
 #endif

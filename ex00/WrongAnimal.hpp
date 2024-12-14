@@ -6,7 +6,7 @@
 /*   By: rilliano <rilliano@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/14 20:16:24 by rilliano          #+#    #+#             */
-/*   Updated: 2024/12/14 20:24:56 by rilliano         ###   ########.fr       */
+/*   Updated: 2024/12/14 20:30:00 by rilliano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,16 +17,15 @@
 #include <string>
 
 class WrongAnimal {
-
 protected:
     std::string type;
-
 public:
     WrongAnimal();
+    WrongAnimal(const WrongAnimal& other);
+    WrongAnimal& operator=(const WrongAnimal& other);
     virtual ~WrongAnimal();
     std::string getType() const;
     void makeSound() const;
-
 };
 
 #endif

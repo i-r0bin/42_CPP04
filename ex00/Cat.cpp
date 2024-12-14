@@ -6,7 +6,7 @@
 /*   By: rilliano <rilliano@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/14 20:11:19 by rilliano          #+#    #+#             */
-/*   Updated: 2024/12/14 20:24:45 by rilliano         ###   ########.fr       */
+/*   Updated: 2024/12/14 20:29:49 by rilliano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,18 @@
 Cat::Cat() {
     type = "Cat";
     std::cout << "Cat created" << std::endl;
+}
+
+Cat::Cat(const Cat& other) : Animal(other) {
+    std::cout << "Cat copied" << std::endl;
+}
+
+Cat& Cat::operator=(const Cat& other) {
+    if (this != &other) {
+        Animal::operator=(other);
+    }
+    std::cout << "Cat assigned" << std::endl;
+    return *this;
 }
 
 Cat::~Cat() {
