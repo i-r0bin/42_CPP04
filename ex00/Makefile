@@ -8,8 +8,6 @@ NAME = animal
 
 all: $(NAME)
 
-all: $(NAME)
-
 $(NAME): $(OBJ)
 	$(CXX) $(CXXFLAGS) $^ -o $@
 
