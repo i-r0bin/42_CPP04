@@ -6,15 +6,15 @@
 /*   By: rilliano <rilliano@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/14 20:41:59 by rilliano          #+#    #+#             */
-/*   Updated: 2024/12/15 16:50:44 by rilliano         ###   ########.fr       */
+/*   Updated: 2024/12/15 19:45:50 by rilliano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef BRAIN_HPP
-#define BRAIN_HPP
+# define BRAIN_HPP
 
-#include <iostream>
-#include <string>
+# include <iostream>
+# include <string>
 
 class Brain {
     private:

@@ -6,15 +6,15 @@
 /*   By: rilliano <rilliano@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/14 20:07:26 by rilliano          #+#    #+#             */
-/*   Updated: 2024/12/15 16:59:47 by rilliano         ###   ########.fr       */
+/*   Updated: 2024/12/15 18:16:48 by rilliano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef AANIMAL_HPP
-#define AANIMAL_HPP
+# define AANIMAL_HPP
 
-#include <iostream>
-#include <string>
+# include <iostream>
+# include <string>
 
 class AAnimal {
     protected:
