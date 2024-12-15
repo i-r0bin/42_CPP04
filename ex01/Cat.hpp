@@ -6,28 +6,28 @@
 /*   By: rilliano <rilliano@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/14 20:42:08 by rilliano          #+#    #+#             */
-/*   Updated: 2024/12/14 20:42:09 by rilliano         ###   ########.fr       */
+/*   Updated: 2024/12/15 16:52:04 by rilliano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef CAT_HPP
-#define CAT_HPP
+# define CAT_HPP
 
-#include "Animal.hpp"
-#include "Brain.hpp"
+# include "Animal.hpp"
+# include "Brain.hpp"
 
 class Cat : public Animal {
+    private:
+        Brain* brain;
 
-private:
-    Brain* brain;
+    public:
+        Cat();
+        Cat(const Cat& other);
+        Cat& operator=(const Cat& other);
+        ~Cat();
 
-public:
-    Cat();
-    Cat(const Cat& other);
-    Cat& operator=(const Cat& other);
-    ~Cat();
-    void makeSound() const;
-
+        void makeSound() const;
+        Brain* getBrain() const;
 };
 
 #endif

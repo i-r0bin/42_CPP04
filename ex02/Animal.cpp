@@ -6,21 +6,21 @@
 /*   By: rilliano <rilliano@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/14 20:08:50 by rilliano          #+#    #+#             */
-/*   Updated: 2024/12/14 20:38:34 by rilliano         ###   ########.fr       */
+/*   Updated: 2024/12/15 17:00:14 by rilliano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Animal.hpp"
 
-Animal::Animal() : type("Animal") {
+AAnimal::AAnimal() : type("Animal") {
     std::cout << "Animal created" << std::endl;
 }
 
-Animal::Animal(const Animal& other) : type(other.type) {
+AAnimal::AAnimal(const AAnimal& other) : type(other.type) {
     std::cout << "Animal copied" << std::endl;
 }
 
-Animal& Animal::operator=(const Animal& other) {
+AAnimal& AAnimal::operator=(const AAnimal& other) {
     if (this != &other) {
         type = other.type;
     }
@@ -28,14 +28,10 @@ Animal& Animal::operator=(const Animal& other) {
     return *this;
 }
 
-Animal::~Animal() {
+AAnimal::~AAnimal() {
     std::cout << "Animal destroyed" << std::endl;
 }
 
-std::string Animal::getType() const {
+std::string AAnimal::getType() const {
     return type;
-}
-
-void Animal::makeSound() const {
-    std::cout << "Animal sound" << std::endl;
 }

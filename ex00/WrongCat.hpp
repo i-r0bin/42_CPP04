@@ -6,22 +6,23 @@
 /*   By: rilliano <rilliano@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/14 20:16:58 by rilliano          #+#    #+#             */
-/*   Updated: 2024/12/14 20:30:18 by rilliano         ###   ########.fr       */
+/*   Updated: 2024/12/15 00:11:07 by rilliano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef WRONGCAT_HPP
-#define WRONGCAT_HPP
+# define WRONGCAT_HPP
 
-#include "WrongAnimal.hpp"
+# include "WrongAnimal.hpp"
 
 class WrongCat : public WrongAnimal {
-public:
-    WrongCat();
-    WrongCat(const WrongCat& other);
-    WrongCat& operator=(const WrongCat& other);
-    ~WrongCat();
-    void makeSound() const;
+    public:
+        WrongCat();
+        WrongCat(const WrongCat& other);
+        WrongCat& operator=(const WrongCat& other);
+        ~WrongCat();
+
+        void makeSound() const;
 };
 
 #endif

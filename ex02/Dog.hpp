@@ -6,28 +6,28 @@
 /*   By: rilliano <rilliano@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/14 20:42:03 by rilliano          #+#    #+#             */
-/*   Updated: 2024/12/14 20:42:04 by rilliano         ###   ########.fr       */
+/*   Updated: 2024/12/15 17:01:03 by rilliano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef DOG_HPP
-#define DOG_HPP
+# define DOG_HPP
 
-#include "Animal.hpp"
-#include "Brain.hpp"
+# include "Animal.hpp"
+# include "Brain.hpp"
 
-class Dog : public Animal {
+class Dog : public AAnimal {
+    private:
+        Brain* brain;
 
-private:
-    Brain* brain;
+    public:
+        Dog();
+        Dog(const Dog& other);
+        Dog& operator=(const Dog& other);
+        ~Dog();
 
-public:
-    Dog();
-    Dog(const Dog& other);
-    Dog& operator=(const Dog& other);
-    ~Dog();
-    void makeSound() const;
-
+        void makeSound() const;
+        Brain* getBrain() const;
 };
 
 #endif

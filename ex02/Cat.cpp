@@ -6,7 +6,7 @@
 /*   By: rilliano <rilliano@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/14 20:42:13 by rilliano          #+#    #+#             */
-/*   Updated: 2024/12/14 20:42:14 by rilliano         ###   ########.fr       */
+/*   Updated: 2024/12/15 17:02:36 by rilliano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,13 +17,13 @@ Cat::Cat() : brain(new Brain()) {
     std::cout << "Cat created" << std::endl;
 }
 
-Cat::Cat(const Cat& other) : Animal(other), brain(new Brain(*other.brain)) {
+Cat::Cat(const Cat& other) : AAnimal(other), brain(new Brain(*other.brain)) {
     std::cout << "Cat copied" << std::endl;
 }
 
 Cat& Cat::operator=(const Cat& other) {
     if (this != &other) {
-        Animal::operator=(other);
+        AAnimal::operator=(other);
         delete brain;
         brain = new Brain(*other.brain);
     }
@@ -38,4 +38,8 @@ Cat::~Cat() {
 
 void Cat::makeSound() const {
     std::cout << "Meow!" << std::endl;
+}
+
+Brain* Cat::getBrain() const {
+    return brain;
 }

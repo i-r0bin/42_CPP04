@@ -6,7 +6,7 @@
 /*   By: rilliano <rilliano@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/14 20:42:13 by rilliano          #+#    #+#             */
-/*   Updated: 2024/12/14 20:42:14 by rilliano         ###   ########.fr       */
+/*   Updated: 2024/12/15 16:57:02 by rilliano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,4 +38,8 @@ Cat::~Cat() {
 
 void Cat::makeSound() const {
     std::cout << "Meow!" << std::endl;
+}
+
+Brain* Cat::getBrain() const {
+    return brain;
 }

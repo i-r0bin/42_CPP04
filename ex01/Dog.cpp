@@ -6,7 +6,7 @@
 /*   By: rilliano <rilliano@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/14 20:42:30 by rilliano          #+#    #+#             */
-/*   Updated: 2024/12/14 20:42:31 by rilliano         ###   ########.fr       */
+/*   Updated: 2024/12/15 16:51:53 by rilliano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,4 +38,8 @@ Dog::~Dog() {
 
 void Dog::makeSound() const {
     std::cout << "Woof!" << std::endl;
+}
+
+Brain* Dog::getBrain() const {
+    return brain;
 }

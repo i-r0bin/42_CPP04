@@ -6,7 +6,7 @@
 /*   By: rilliano <rilliano@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/14 20:41:55 by rilliano          #+#    #+#             */
-/*   Updated: 2024/12/14 20:41:56 by rilliano         ###   ########.fr       */
+/*   Updated: 2024/12/15 16:56:57 by rilliano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,4 +35,17 @@ Brain& Brain::operator=(const Brain& other) {
 
 Brain::~Brain() {
     std::cout << "Brain destroyed" << std::endl;
+}
+
+void Brain::setIdea(int index, const std::string& idea) {
+    if (index >= 0 && index < 100) {
+        ideas[index] = idea;
+    }
+}
+
+std::string Brain::getIdea(int index) const {
+    if (index >= 0 && index < 100) {
+        return ideas[index];
+    }
+    return "";
 }

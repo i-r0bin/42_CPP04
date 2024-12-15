@@ -6,7 +6,7 @@
 /*   By: rilliano <rilliano@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/14 20:42:30 by rilliano          #+#    #+#             */
-/*   Updated: 2024/12/14 20:42:31 by rilliano         ###   ########.fr       */
+/*   Updated: 2024/12/15 17:02:05 by rilliano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,13 +17,13 @@ Dog::Dog() : brain(new Brain()) {
     std::cout << "Dog created" << std::endl;
 }
 
-Dog::Dog(const Dog& other) : Animal(other), brain(new Brain(*other.brain)) {
+Dog::Dog(const Dog& other) : AAnimal(other), brain(new Brain(*other.brain)) {
     std::cout << "Dog copied" << std::endl;
 }
 
 Dog& Dog::operator=(const Dog& other) {
     if (this != &other) {
-        Animal::operator=(other);
+        AAnimal::operator=(other);
         delete brain;
         brain = new Brain(*other.brain);
     }
@@ -38,4 +38,8 @@ Dog::~Dog() {
 
 void Dog::makeSound() const {
     std::cout << "Woof!" << std::endl;
+}
+
+Brain* Dog::getBrain() const {
+    return brain;
 }
