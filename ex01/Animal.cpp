@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Animal.cpp                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: rilliano <rilliano@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/12/16 19:09:53 by rilliano          #+#    #+#             */
+/*   Updated: 2024/12/16 19:13:48 by rilliano         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "Animal.hpp"
 
 Animal::Animal() : type("Animal") {
@@ -22,4 +34,8 @@ Animal::~Animal() {
 
 std::string Animal::getType() const {
     return type;
+}
+
+void Animal::makeSound() const {
+    std::cout << "Animal sound" << std::endl;
 }
