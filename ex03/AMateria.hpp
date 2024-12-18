@@ -6,7 +6,7 @@
 /*   By: rilliano <rilliano@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/15 19:37:38 by rilliano          #+#    #+#             */
-/*   Updated: 2024/12/15 19:37:40 by rilliano         ###   ########.fr       */
+/*   Updated: 2024/12/18 20:39:38 by rilliano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,8 @@ class AMateria {
 
     public:
         AMateria(std::string const & type);
+        AMateria(AMateria const & other);
+        AMateria& operator=(AMateria const & other);
         virtual ~AMateria();
 
         std::string const & getType() const;

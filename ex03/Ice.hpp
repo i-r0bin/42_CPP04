@@ -6,7 +6,7 @@
 /*   By: rilliano <rilliano@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/15 19:38:03 by rilliano          #+#    #+#             */
-/*   Updated: 2024/12/15 19:38:05 by rilliano         ###   ########.fr       */
+/*   Updated: 2024/12/18 20:39:34 by rilliano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@
 class Ice : public AMateria {
     public:
         Ice();
+        Ice(Ice const & other);
+        Ice& operator=(Ice const & other);
         virtual ~Ice();
 
         virtual AMateria* clone() const;

@@ -6,7 +6,7 @@
 /*   By: rilliano <rilliano@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/15 19:39:16 by rilliano          #+#    #+#             */
-/*   Updated: 2024/12/15 19:39:21 by rilliano         ###   ########.fr       */
+/*   Updated: 2024/12/18 20:50:00 by rilliano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,15 @@
 #include <iostream>
 
 Cure::Cure() : AMateria("cure") {}
+
+Cure::Cure(Cure const & other) : AMateria(other) {}
+
+Cure& Cure::operator=(Cure const & other) {
+    if (this != &other) {
+        AMateria::operator=(other);
+    }
+    return *this;
+}
 
 Cure::~Cure() {}
 

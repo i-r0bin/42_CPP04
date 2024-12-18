@@ -6,7 +6,7 @@
 /*   By: rilliano <rilliano@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/15 19:39:07 by rilliano          #+#    #+#             */
-/*   Updated: 2024/12/15 19:39:10 by rilliano         ###   ########.fr       */
+/*   Updated: 2024/12/18 20:50:15 by rilliano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,15 @@
 #include <iostream>
 
 Ice::Ice() : AMateria("ice") {}
+
+Ice::Ice(Ice const & other) : AMateria(other) {}
+
+Ice& Ice::operator=(Ice const & other) {
+    if (this != &other) {
+        AMateria::operator=(other);
+    }
+    return *this;
+}
 
 Ice::~Ice() {}
 
